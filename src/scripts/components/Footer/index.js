@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 class Footer extends HTMLElement {
   connectedCallback() {
     this.render();
@@ -7,8 +8,8 @@ class Footer extends HTMLElement {
     this.innerHTML = `
     <footer>
         <ul>
-            <li tabindex="0">Copyright © 2022 - Restaurant Enjoy</li>
-            <li tabindex="0">Build With 🧡 Riko Airlan Ramadhan</li>
+            <li>Copyright © 2022 - Restaurant Enjoy</li>
+            <li>Build With 🧡 Riko Airlan Ramadhan</li>
         </ul>
     </footer>
 `;

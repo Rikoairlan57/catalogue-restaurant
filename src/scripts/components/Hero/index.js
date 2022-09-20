@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 class Hero extends HTMLElement {
   connectedCallback() {
     this.render();
