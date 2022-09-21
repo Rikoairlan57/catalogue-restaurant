@@ -6,7 +6,7 @@ const CONFIG = {
   DATABASE_NAME: "restjoyDb",
   OBJECT_STORE_NAME: "restaurant",
   DATABASE_VERSION: 1,
-  CACHE_NAME: new Date().toISOString(),
+  CACHE_NAME: "MovieCatalogue",
 };
 
 export default CONFIG;
