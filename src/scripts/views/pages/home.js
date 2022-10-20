@@ -7,6 +7,7 @@ import swallError from "../../components/SweetAlert/swal-error";
 const Home = {
   async render() {
     return `
+    
       <section class="content">
         <div class="latest">
           <div tabindex="0" class="latest__label">
@@ -28,6 +29,7 @@ const Home = {
       });
     } catch (error) {
       console.error(error);
+
       swallError(error.message);
       throw new Error(error);
     }

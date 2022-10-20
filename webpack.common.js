@@ -1,3 +1,5 @@
+/* eslint-disable operator-linebreak */
+/* eslint-disable prefer-destructuring */
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable quotes */
@@ -5,6 +7,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
 const path = require("path");
+const ImageminWebpackPlugin = require("imagemin-webpack-plugin").default;
+const ImageminMozjpeg = require("imagemin-mozjpeg");
+const BundleAnalyzerPlugin =
+  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
   entry: {
@@ -16,6 +22,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+
   module: {
     rules: [
       {
@@ -41,8 +48,20 @@ module.exports = {
         {
           from: path.resolve(__dirname, "src/public/"),
           to: path.resolve(__dirname, "dist/"),
+          globOptions: {
+            ignore: ["**/images/**"],
+          },
         },
       ],
     }),
+    new ImageminWebpackPlugin({
+      plugins: [
+        ImageminMozjpeg({
+          quality: 50,
+          progressive: true,
+        }),
+      ],
+    }),
+    new BundleAnalyzerPlugin(),
   ],
 };

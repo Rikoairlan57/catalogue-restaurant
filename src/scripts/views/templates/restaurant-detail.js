@@ -5,8 +5,8 @@
 import CONFIG from "../../global/config";
 
 const RestaurantDetail = (resto) => `
-  <div tabindex="0" class = "detail-label">
-    <h2>Halaman ${resto.name}</h2>
+  <div tabindex="0" class ="detail-label">
+    <h2>Halaman Detail</h2>
   </div>
   <div class = "content-detail">
     <img tabindex="0" class="restaurant-detail__thumbnail" src="${
@@ -90,6 +90,8 @@ const RestaurantDetail = (resto) => `
         .join("")}
     </ul>
   </div>
+
+
 `;
 
 export default RestaurantDetail;

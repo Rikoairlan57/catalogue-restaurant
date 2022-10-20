@@ -47,8 +47,8 @@ const LikeButtonInitiator = {
   _renderUnlikeButtonComponent() {
     this._likeButtonContainer.innerHTML = unlikeButtonComponent();
 
-    const likeButton = document.querySelector("#likeButton");
-    likeButton.addEventListener("click", async () => {
+    const likedButton = document.querySelector("#likedButton");
+    likedButton.addEventListener("click", async () => {
       await FavoriteRestaurantIdb.deleteResto(this._restaurant.id);
       swalSuccess("Berhasil dihapus");
       this._renderButton();

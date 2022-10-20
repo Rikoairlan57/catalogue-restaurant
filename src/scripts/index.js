@@ -5,6 +5,8 @@ import "../styles/main.css";
 import "../styles/responsive.css";
 import "../scripts/components/Hero/index";
 import "../scripts/components/Footer/index";
+import "lazysizes";
+import "lazysizes/plugins/parent-fit/ls.parent-fit";
 import App from "./views/app";
 import swRegister from "./utils/sw-register";
 

@@ -3,10 +3,10 @@
 import CONFIG from "../../global/config";
 
 const RestaurantCard = (resto) => `
-    <article tabindex="0" class="restaurant-item alt="Menu untuk melihat restoran">
+  <article tabindex="0" class="restaurant-item" alt="Menu untuk melihat restoran">
     <a href="#/detail/${resto.id}">
     
-    <img  class="restaurant-item__thumbnail" src="${
+    <img  class="restaurant-item__thumbnail lazyload" src="${
       CONFIG.BASE_IMAGE_URL + resto.pictureId
     }" 
     alt="${resto.name}" title="${resto.name}">

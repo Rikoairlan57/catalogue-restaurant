@@ -1,5 +1,5 @@
 const unlikeButtonComponent = () => `
-  <button aria-label="unlike this restaurant" id="likeButton" class="like">
+  <button aria-label="Menyimpan restaurant" id="likedButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;
